@@ -18,7 +18,7 @@
 example of math expression:- WHAT IS 196 / 431 ?
 
 ####Solve the maths, and do the following:
-###$Replace all the space in the math expression with "%20" before sending back to server.
+####Replace all the space in the math expression with "%20" before sending back to server.
 
 ######curl -X PUT -d answer=67 -d question=WHAT%20IS%20196%20/%20431%20? localhost:5566
 
