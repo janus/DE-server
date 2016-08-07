@@ -7,6 +7,7 @@
 (at DE prompt enter)
 ##start
 (To end enter stop)
+##stop
 
 ###On another shell ,do the following:
 ###curl -X GET 'http://localhost:5566/question'
