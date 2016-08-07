@@ -1,0 +1,39 @@
+This is a basic CGI server named DE written in C lanuage. It is also hooked to Clisp. 
+The Clisp side is for questions generation.
+
+Assumption::
+This app was only tested with gcc and clisp.
+
+configuration
+Go to bridge.c and make sure that your path point to where clisp is
+execl("/usr/bin/clisp", "clisp", "./CAPTCHA/cd.lisp",NULL);
+Go to serverd.c and adjust the port as you wish
+
+compile and run::
+
+gcc -o serverd serverd.c
+
+./serverd
+
+At DE server prompt enter start to run server, and to
+stop the server enter stop.
+
+Send message to the server using the below format. You can change the Port accordingly
+
+
+
+To get question run the below
+On another shell ,do the following:
+curl -X GET 'http://localhost:5566/question'
+(change the port number to reflect what you have from the server)
+
+The server will response with a question... simple mathematical expression(this is machine generated , so the gramma may be wrong)
+example of math expression:- WHAT IS 196 / 431 ?
+
+Solve the maths, and do the following:
+Replace all the space in the math expression with "%20" before sending back to server.
+
+curl -X PUT -d answer=67 -d question=WHAT%20IS%20196%20/%20431%20?
+
+
+
