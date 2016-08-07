@@ -22,6 +22,6 @@ example of math expression:- WHAT IS 196 / 431 ?
 
 ######curl -X PUT -d answer=67 -d question=WHAT%20IS%20196%20/%20431%20? localhost:5566
 
-##It is started with only Clisp, and you may need to open bridge.c and edit path of Clisp to reflect your own path.
-##In case you want to use a different Port, go and make such changes in serverd.c . 
+######It is started with only Clisp, and you may need to open bridge.c and edit path of Clisp to reflect your own path.
+######In case you want to use a different Port, go and make such changes in serverd.c . 
  
